@@ -1,0 +1,212 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+}
+
+body,html {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* background-color:#dada; */
+}
+
+#left {    
+         overflow: hidden;
+         position: relative;
+         height: 100vh;
+         width: 50%;
+         
+}
+#left img{
+    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation-name: roti;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+   
+}   
+ #Overlay {
+    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    background-color: rgba(240, 43, 43);
+    animation-name: move;
+    animation-duration: 1.4s;
+    animation-fill-mode: backwards;
+    opacity: 0;
+    
+
+}
+
+#nav {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    padding: 35px;
+}
+#nav h1,i {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    animation-name: bc;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    
+
+}
+#left>h1 {
+    color: #fff;
+    position: absolute;
+    z-index: 999;
+    right: 3%;
+    bottom: 3%;
+    font-size: 80px;
+    line-height:75px ;
+    text-align: right;
+    font-weight: 600;  
+    animation-name: move;  
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    overflow: hidden;
+}
+
+#right {   
+         position: relative;
+         height: 100vh;
+         width: 50%;
+        
+}
+  #img1 {
+           overflow: hidden;
+           position: absolute;
+           height: 150px; 
+           width: 130px; 
+           top: 0%;
+           left: 50%;
+           /* transform: translate(-50%,0%); */
+           object-fit: cover;
+           object-position: center;
+           animation-name: move;  
+           animation-duration: 1.4s;
+           /* animation-delay: 1s; */
+           animation-fill-mode: backwards;
+}
+ #img2 {
+           position: absolute;
+           overflow: hidden;
+           height: 150px; 
+           width: 130px; 
+           top: 55%;
+           left: 10%;
+           transform: translate(0,-50%);
+           object-fit: cover;
+           object-position: center;
+           animation-name: move;  
+           animation-duration: 1.4s;
+           /* animation-delay: 1s; */
+           animation-fill-mode: backwards;
+}
+ #img3 {
+           position: absolute;
+           overflow: hidden;
+           height: 150px; 
+           width: 130px;  
+           left: 50%;
+           bottom: 0%;
+           object-fit: cover;
+           object-position: center;
+           animation-name: move;  
+           animation-duration: 1.4s;
+           /* animation-delay: 1s; */
+           animation-fill-mode: backwards;
+}
+ #right h1{
+    position: absolute;
+    z-index: 999;
+    top: 40%;
+    left: 75%;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    animation-name: ram;
+    animation-duration: 1.4s;
+    animation-fill-mode: backwards;
+    animation: stroke-offset 5.5s infinite linear;
+ }
+
+@keyframes move {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+          
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+          
+    }
+    
+}
+@keyframes roti {
+        0%{
+            opacity: 0;
+            transform: rotate(30deg) scale(1.4);
+            
+        }
+        100%{
+              opacity: 1;
+              transform: rotate(0) scale(1);
+        }
+}
+
+@keyframes bc {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    
+}
+
+@keyframes ram {
+    0%{
+        top: 40%;
+        left: 75%;
+    }
+    100%{
+        top: 40%;
+        left: 75%;
+    }
+}
+
+ 
+
+
+
